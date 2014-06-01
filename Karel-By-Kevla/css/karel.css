@@ -1,0 +1,28 @@
+body { font-family: verdana; }
+
+#btns { float: right;}
+
+#btmPanel { float: none; }
+
+.lstPanel { float: left; }
+
+#longlist { width: 220px; }
+
+.karel { color: red; }
+
+table { border: 1px solid black; }
+
+td { text-align: center; width: 30px; height: 30px;}
+
+.CodeMirror { border-top: 1px solid black; border-bottom: 1px solid black; height: 30%;}
+.activeline { background: #e8f2ff !important;}
+
+
+#myWorld { width: 100%;}
+#myWorld div { padding: 20px;}
+
+
+
+#matrix { color: green; float: left;}
+#karelinfo { color: blue; float: left;}
+#instructions{ color: gray; float: right;}

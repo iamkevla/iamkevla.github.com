@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>krackas.com</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Karel by Kevla
+		
+		
+	
+	
+		Karel by Kevla
+		
+		
+			Run Reset
+			
+				
+			
+		
+		
+			
+				
+					
+						
+								
+								K
+								
+							
+						
+					
+				
+			
+			
+				Position: undefined, un">
+<meta property="og:type" content="website">
+<meta property="og:title" content="krackas.com">
+<meta property="og:url" content="http://krackas.com/Karel-By-Kevla/index.html">
+<meta property="og:site_name" content="krackas.com">
+<meta property="og:description" content="Karel by Kevla
+		
+		
+	
+	
+		Karel by Kevla
+		
+		
+			Run Reset
+			
+				
+			
+		
+		
+			
+				
+					
+						
+								
+								K
+								
+							
+						
+					
+				
+			
+			
+				Position: undefined, un">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="krackas.com">
+<meta name="twitter:description" content="Karel by Kevla
+		
+		
+	
+	
+		Karel by Kevla
+		
+		
+			Run Reset
+			
+				
+			
+		
+		
+			
+				
+					
+						
+								
+								K
+								
+							
+						
+					
+				
+			
+			
+				Position: undefined, un">
+  
+    <link rel="alternative" href="/atom.xml" title="krackas.com" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link href="http://fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">krackas.com</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Insanely Good...</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><input type="submit" value="&#xF002;" class="search-form-submit"><input type="hidden" name="q" value="site:http://krackas.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/Karel-By-Kevla/index.html" class="article-date">
+  <time datetime="2014-06-01T04:35:24.000Z" itemprop="datePublished">Jun 1 2014</time>
+</a>
+
+    
+
+  </div>
+  <div class="article-inner">
+    
+
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="utf-8">
+		<title>Karel by Kevla</title>
+		<link rel="stylesheet" href="css/karel.css">
+		<link rel="stylesheet" href="css/codemirror.css">
+	</head>
+	<body ng-controller="mainCtrl">
+		<h1>Karel by Kevla</h1>
+		
+		<div>
+			<div id="btns"><button ng-click="play()">Run</button> <button ng-click="init()">Reset</button></div>
+			<form>
+				<textarea id="code"></textarea>
+			</form>
+		</div>
+		<div id="btmPanel">
+			<div id="matrix">
+				<table>
+					<tr ng-repeat="row in world  track by $index" style="height:30px;">
+						<td ng-repeat="item in row  track by $index">
+							<div ng-switch="" on="(($parent.$index===karel.position[1]) &#x26;&#x26; ($index===karel.position[0]))">	
+								<span ng-switch-when="true">K</span>
+								<span ng-switch-default=""><span>
+							</span></span></div>
+						</td>
+					</tr>
+				</table>
+			</div>
+			<div id="karelinfo">
+				<p>Position: undefined, undefined</p><p>
+				</p><p>Direction: </p><p>
+				</p><p>Beepers: </p><p>
+			</p></div>
+
+			<div id="instructions">
+				<h3>karel can...</h3>
+				<div class="lstPanel">
+					<ul>
+						<li>move();</li>
+						<li>turnLeft();</li>
+						<li>pickBeeper();</li>
+						<li>putBeeper();</li>
+					</ul>
+				</div>
+				<div class="lstPanel">
+					<ul>
+						<li>frontIsClear()</li>
+						<li>leftIsClear()</li>
+						<li>rightIsClear()</li>
+						<li>beepersPresent()</li>
+						<li>facingNorth()</li>
+						<li>facingSouth()</li>
+						<li>facingEast()</li>
+						<li>facingWest()</li>
+					</ul>
+				</div>	
+				<div class="lstPanel">
+					<ul>
+						<li>frontIsBlocked()</li>
+						<li>leftIsBlocked()</li>
+						<li>rightIsBlocked()</li>
+						<li>noBeepersPresent()</li>
+						<li>notFacingNorth()</li>
+						<li>notFacingSouth()</li>
+						<li>notFacingEast()</li>
+						<li>notFacingWest()</li>
+					</ul>
+				</div>	
+				<div id="longlist" class="lstPanel" style="width:220px;">
+					<ul>
+						<li style="word-wrap: break-word">var func = function () { statements };</li>
+						<li style="word-wrap: break-word">if ( condition ) { statements } else { statements }</li>
+						<li style="word-wrap: break-word">while ( condition ) { statements }</li>
+					</ul>
+				</div>	
+			</div>
+		</div>
+
+		<!-- javascript code here -->
+		<script type="text/javascript" src="lib/codemirror/codemirror.js"></script>
+    	<script type="text/javascript"> 		
+			var editor = CodeMirror.fromTextArea(document.getElementById(&quot;code&quot;), {
+			  	mode: &quot;javascript&quot;,
+			  	lineNumbers: true
+			});
+		</script>
+		<script type="text/javascript" src="lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/services.js"></script>
+		<script type="text/javascript" src="js/controllers.js"></script>
+
+	</body>	
+</html>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://krackas.com/Karel-By-Kevla/index.html" data-id="2yknje6cjun3gmsu" class="article-share-link">Share</a>
+      
+      
+
+    </footer>
+  </div>
+  
+    
+
+  
+</article>
+
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/03">March 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01">January 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/09">September 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/04">April 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/03">March 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/02">February 2012</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2014/06/01/Migrate-to-Hexo/">Migrate to Hexo</a>
+          </li>
+        
+          <li>
+            <a href="/2013/03/13/Software-Definiton-Framework/">Software Definiton Framework</a>
+          </li>
+        
+          <li>
+            <a href="/2013/01/20/Bootstrap-components-as-AngularJS-Directives/">Bootstrap components as AngularJS Directives</a>
+          </li>
+        
+          <li>
+            <a href="/2012/09/14/AngularJS-crud-example-sans-delete/">AngularJS crud example sans delete</a>
+          </li>
+        
+          <li>
+            <a href="/2012/04/28/Mumbles-(Node-Version)/">Mumbles (Node Version)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+
+  
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2014 Kevla<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script type="text/javascript" src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
